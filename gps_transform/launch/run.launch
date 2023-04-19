@@ -1,0 +1,7 @@
+<launch>
+    <!-- Start gps trans -->
+    <node pkg="gps_transform" type="gps_trans" name="gps_trans" output="screen">
+    </node>
+    <!-- Start RViz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find gps_transform)/rviz/rviz.rviz"/>
+</launch>
