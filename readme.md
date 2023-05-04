@@ -34,12 +34,13 @@ $P_{LLA} \rightarrow P_{ECEF} \rightarrow P_{ENU}$
 一个点的LLA为纬度、经度、高度分别为 $\lambda ,\varphi ,h$ ，这个点在ECEF坐标系下的位置为：
 
 $$\begin{aligned}
-\mathrm{x} & =\left(\mathrm{R}_{\mathrm{N}}+\mathrm{h}\right) \cos \phi \cos \lambda \\
-\mathrm{y} & =\left(\mathrm{R}_{\mathrm{N}}+\mathrm{h}\right) \cos \phi \sin \lambda \\
-\mathrm{z} & =\left(\left[1-\mathrm{e}^2\right] \mathrm{R}_{\mathrm{N}}+\mathrm{h}\right) \sin \phi
+x & =\left(R_{\phi}+h\right) \cos \phi \cos \lambda \\
+y & =\left(R_{\phi}+h\right) \cos \phi \sin \lambda \\
+z & =\left(\left[1-e^2\right] R_{\phi}+h\right) \sin \phi \\
 \end{aligned}$$
+
 其中
-$$N(\phi)=\frac{a^2}{\sqrt{a^2 \cos ^2 \phi+b^2 \sin ^2 \phi}}=\frac{a}{\sqrt{1-e^2 \sin ^2 \phi}}$$
+$$R_{\phi}=\frac{a^2}{\sqrt{a^2 \cos ^2 \phi+b^2 \sin ^2 \phi}}=\frac{a}{\sqrt{1-e^2 \sin ^2 \phi}}$$
 
 - a: 地球长半轴长度
 - e: 椭圆扁率
